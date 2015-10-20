@@ -16,6 +16,7 @@ number_property(-7)  # ==> [false, false, false]
 number_property(-10) # ==> [false, true,  true]
 =end
 
+
 def number_property( n )
     return[ is_prime( n ), is_even( n ), is_multiple( n, 10 ) ]
 end
@@ -36,7 +37,7 @@ def is_even( n )
 end
 
 def is_multiple( n, m )
-    return n != 0 && m % n == 0 
+    return n != 0 && m % ( n + 10 ) == 0 
 end
 
 puts number_property( 2 )
