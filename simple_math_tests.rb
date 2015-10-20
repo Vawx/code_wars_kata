@@ -38,7 +38,6 @@ end
 
 def is_multiple( n, m )
     n += m
-    return n != 0 && m % n == 0 
+    return n % m == 0 
 end
 
-puts number_property( 2 )
