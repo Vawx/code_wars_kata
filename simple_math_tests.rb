@@ -37,7 +37,8 @@ def is_even( n )
 end
 
 def is_multiple( n, m )
-    return n != 0 && m % ( n + 10 ) == 0 
+    n += m
+    return n != 0 && m % n == 0 
 end
 
 puts number_property( 2 )
