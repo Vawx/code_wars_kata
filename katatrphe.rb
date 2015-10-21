@@ -31,7 +31,10 @@ def strong_enough( earthquake, age )
 end
 
 def exponential_decay( age )
-    decay = 1000 * 0.99 ** age
+    decay = 1000
+    age.times do 
+        decay = decay * 0.99
+    end
     return decay
 end
 
