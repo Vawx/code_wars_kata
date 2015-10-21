@@ -23,11 +23,7 @@ def strong_enough( earthquake, age )
         end
         magnitude *= adding_mag
     end
-    if exponential_decay( age ) >= magnitude
-        return "Safe!"
-    else
-        return "Needs Reinforcement!"
-    end
+    exponential_decay( age ) >= magnitude ? return "Safe!" : return "Needs Reinforcement!"
 end
 
 def exponential_decay( age )
