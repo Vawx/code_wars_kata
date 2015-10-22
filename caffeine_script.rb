@@ -26,7 +26,7 @@ def caffeineBuzz( n )
        end
     end
     if caffeine != "" && n.even?
-       caffeine += " Script" 
+       caffeine += "Script" 
     end
     return ( caffeine != "" ) ? caffeine : "mocha_missing!"
 end
