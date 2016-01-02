@@ -21,7 +21,7 @@ class Dictionary
         end
     end
     
-    # returns the sorted keywords of entries
+    # keys accessor : returns the sorted keywords of entries
     def keywords
        @entries.keys.sort # sorts keys to alphabetical 
     end
@@ -50,13 +50,13 @@ class Dictionary
     # sorts, concatenates, and returns printable string of current entries
     def printable
         asPrintable = ""
-        doCount = 0
+        doCount = 0 # way to keep track of the entries loop so a new line can be added to the end of the concat string
         @entries.sort.each do |keyWord, value|
             asPrintable += "[#{keyWord}] \"#{value}\""
             if doCount < @entries.length - 1 # in order for test to pass, it cant have a extra line at the end
                 asPrintable += "\n"          # only add one if not the last element of the hash
             end
-            doCount += 1
+            doCount += 1 # each loop adds one
         end
         asPrintable # return concat string
     end
